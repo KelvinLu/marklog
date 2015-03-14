@@ -32,8 +32,6 @@ def blogpost(postslug):
     if not p:
         abort(404)
 
-    html = p.render_html()
-
     context = {
         "blog_title": app.config['MARKLOG_BLOG_TITLE'],
         "post_title": p.title,
